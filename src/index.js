@@ -4,11 +4,13 @@ import reactDom from 'react-dom'
 function Greeting() {
     return (
         <div>
-            <h1>This is Farid and this is my first compo nent</h1>
+            <Person />
+            <Message />
         </div>
     )
 }
-
+const Person = () => <h1>Farid Abou Diab</h1>
+const Message = () => <p>This is my message</p>
 // const Greeting = () => {
 //     return React.createElement(
 //         'div',
