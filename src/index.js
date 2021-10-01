@@ -1,46 +1,49 @@
-import React from 'react'
-import reactDom from 'react-dom'
-import './index.css'
+import React from 'react';
+import reactDom from 'react-dom';
+import './index.css';
+
+const firstBook = {
+  img: 'https://images-na.ssl-images-amazon.com/images/I/71Ptolb7qnL._AC_UL200_SR200,200_.jpg',
+  title: 'Peril',
+  autthor: 'Bob Woodward',
+};
+const secondBook = {
+  img: 'https://images-na.ssl-images-amazon.com/images/I/81MgsNre3IL._AC_UL200_SR200,200_.jpg',
+  title: 'The Wish',
+  autthor: 'Nicholas Sparkss',
+};
 
 function BookList() {
-    return (
-        <section className="BookList">
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-        </section>
-    )
+  return (
+    <section className="BookList">
+      <Book
+        title={firstBook.title}
+        autthor={firstBook.autthor}
+        img={firstBook.img}
+      />
+      <Book
+        title={secondBook.title}
+        autthor={secondBook.autthor}
+        img={secondBook.img}
+      />
+    </section>
+  );
 }
+
+const Book = props => {
+  return (
+    <article className="Book">
+      <img src={props.img} alt="" />
+      <h1>{props.title}</h1>
+      <h4>{props.autthor}</h4>
+    </article>
+  );
+};
+
+reactDom.render(<BookList />, document.getElementById('root'));
+
 // const Person = () => <h1>Farid Abou Diab</h1>
 // const Message = () => <p>This is my message</p>
-const Image = () => (
-    <img
-        src="https://images-na.ssl-images-amazon.com/images/I/81bsw6fnUiL._AC_UL200_SR200,200_.jpg"
-        alt=""
-    />
-)
-const Book = () => {
-    return (
-        <article className="Book">
-            <Image> </Image>
-            <Title />
-            <Author />
-        </article>
-    )
-}
-const Title = () => (
-    <h1>
-        Rich Dad Poor Dad: What the Rich Teach Their Kids About Money That the
-        Poor and Middle Class Do Not!
-    </h1>
-)
-const Author = () => <h4>Robert T. Kiyosaki</h4>
 // const Greeting = () => {
 //     return React.createElement(
 //         'div',
@@ -48,5 +51,3 @@ const Author = () => <h4>Robert T. Kiyosaki</h4>
 //         React.createElement('h1', {}, 'HELLO FARID!')
 //     )
 // }
-
-reactDom.render(<BookList />, document.getElementById('root'))
