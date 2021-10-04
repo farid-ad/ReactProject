@@ -13,7 +13,7 @@ const Book = ({ img, title, autthor }) => {
       <h1>{title}</h1>
       <h4>{autthor}</h4>
       <button type="button" onClick={clickHandler}>
-        Buy Now
+        Buy Now.``
       </button>
     </article>
   );
