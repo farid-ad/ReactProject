@@ -39,6 +39,6 @@ export const books = [
     id: 6,
     img: "https://images-na.ssl-images-amazon.com/images/I/81RuAzKrHkL._AC_UL200_SR200,200_.jpg",
     title: "The 5 Love Languages: The Secret to Love that Lasts Paperback",
-    autthor: "Gary Chapman",
+    autthor: "Gary Chapman.",
   },
 ];
